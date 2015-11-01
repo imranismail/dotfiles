@@ -259,9 +259,11 @@ body div.line[ltype*=ctcp],
 body div.line[ltype*=notice],
 body div.line[ltype*=wallops] {
 	color: $red;
-	z-index: 191;
-	background: $current-line;
-	position: relative;
+  z-index: 191;
+	background: darken($red, 45%);
+	border-bottom: solid 1px $red;
+	border-top: solid 1px $red;
+  position: relative;
 	padding: 2px 5px 2px 5px;
 }
 

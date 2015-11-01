@@ -237,7 +237,9 @@ body div.line[ltype*=notice],
 body div.line[ltype*=wallops] {
   color: #ff5555;
   z-index: 191;
-  background: #44475a;
+  background: #6e0000;
+  border-bottom: solid 1px #ff5555;
+  border-top: solid 1px #ff5555;
   position: relative;
   padding: 2px 5px 2px 5px;
 }
