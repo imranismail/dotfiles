@@ -78,6 +78,7 @@ brew install dnsmasq
 brew install memcached
 brew install watchman
 brew install git-extras
+brew install gpg
 
 # Remove outdated versions from the cellar.
 brew cleanup
