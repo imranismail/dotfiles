@@ -16,6 +16,14 @@ alias p="cd ~/projects"
 alias g="git"
 alias h="history"
 alias j="jobs"
+alias start-nginx="sudo launchctl load /Library/LaunchDaemons/homebrew.mxcl.nginx.plist"
+alias stop-nginx="sudo launchctl unload /Library/LaunchDaemons/homebrew.mxcl.nginx.plist"
+alias restart-nginx="stop-nginx && start-nginx"
+alias edit-nginx="st /usr/local/etc/nginx"
+alias showfiles='defaults write com.apple.finder AppleShowAllFiles YES;
+killall Finder /System/Library/CoreServices/Finder.app'
+alias hidefiles='defaults write com.apple.finder AppleShowAllFiles NO;
+killall Finder /System/Library/CoreServices/Finder.app'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`

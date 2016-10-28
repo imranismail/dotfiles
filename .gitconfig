@@ -121,9 +121,9 @@
 
 [color "status"]
 
-	added = yellow
-	changed = green
-	untracked = cyan
+  added = green
+  changed = blue
+  untracked = magenta
 
 [commit]
 
@@ -134,6 +134,8 @@
 
 	# Detect copies as well as renames
 	renames = copies
+  tool = Kaleidoscope
+  compactionHeuristic = true
 
 [diff "bin"]
 
@@ -149,6 +151,7 @@
 
 	# Include summaries of merged commits in newly created merge commit messages
 	log = true
+  tool = Kaleidoscope
 
 [push]
 
@@ -180,3 +183,21 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+
+[user]
+  name = Imran Ismail
+  email = imran.codely@gmail.com
+
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
+
+[mergetool "Kaleidoscope"]
+  cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
+  trustexitcode = true
+
+[difftool "Kaleidoscope"]
+  cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"

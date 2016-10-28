@@ -28,3 +28,8 @@ export LESS_TERMCAP_md="${yellow}";
 
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
+
+export EC2_HOME=~/.ec2
+export NVM_DIR=~/.nvm
+export GOPATH=~/.go
+export NVIM_TUI_ENABLE_TRUE_COLOR=1
