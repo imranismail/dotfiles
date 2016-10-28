@@ -18,9 +18,9 @@ function doIt() {
 if [ "$1" == "--force" -o "$1" == "-f" ]; then
 	doIt;
 else
-	read "?This may overwrite existing files in your home directory. Are you sure? (y/n) ";
+	read "CONFIRMATION?This may overwrite existing files in your home directory. Are you sure? (y/n) ";
 	echo "";
-	if [[ $REPLY =~ ^[Yy]$ ]]; then
+	if [[ $CONFIRMATION =~ ^[Yy]$ ]]; then
 		doIt;
 	fi;
 fi;
